@@ -2,14 +2,13 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CV - Nom Prénom</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - HADJADJ Mehdi</title>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
@@ -17,194 +16,165 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 20px auto;
             background-color: #fff;
             padding: 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left-column {
+            width: 30%;
+            padding-right: 20px;
+            border-right: 2px solid #ccc;
+        }
+
+        .right-column {
+            width: 70%;
+            padding-left: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
         }
 
         h1 {
-            text-align: center;
-            color: #4a90e2;
-            font-size: 32px;
+            color: #b02e2e;
+            font-size: 26px;
+            margin-top: 0;
         }
 
-        h2 {
-            font-size: 24px;
-            border-bottom: 2px solid #4a90e2;
-            padding-bottom: 10px;
+        .section-title {
+            font-size: 22px;
+            color: #b02e2e;
+            border-bottom: 2px solid #b02e2e;
+            padding-bottom: 5px;
             margin-bottom: 15px;
-            color: #333;
         }
 
-        .personal-info {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .personal-info p {
-            margin: 5px;
-            font-size: 16px;
-        }
-
-        .info-section {
+        .personal-info, .competences, .langues, .interet {
             margin-bottom: 20px;
         }
 
-        .info-section table {
+        .personal-info p, .competences p, .langues p, .interet p {
+            margin: 5px 0;
+        }
+
+        .competences ul, .langues ul, .interet ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .competences ul li, .langues ul li, .interet ul li {
+            margin: 5px 0;
+        }
+
+        .formations table {
             width: 100%;
             border-collapse: collapse;
         }
 
-        .info-section th, .info-section td {
+        .formations th, .formations td {
             padding: 10px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
         }
 
-        .info-section th {
-            width: 150px;
+        .formations th {
             background-color: #f0f0f0;
         }
 
-        .skills, .interests {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .skills div, .interests div {
-            width: 48%;
-        }
-
-        .skills-table, .interests-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .skills-table td, .interests-table td {
-            padding: 8px;
+        .formations td {
             border-bottom: 1px solid #ddd;
         }
 
-        .skills-table th, .interests-table th {
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #f4f4f9;
+        .project {
             margin-top: 20px;
-            font-size: 12px;
+            font-size: 14px;
         }
+
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Nom Prénom</h1>
-        <div class="personal-info">
-            <p>93 Villetaneuse</p>
-            <p>Célibataire | Permis B</p>
-            <p><a href="mailto:nom.prenom@mail.com">nom.prenom@mail.com</a></p>
-        </div>
+        <div class="left-column">
+            <img src="https://via.placeholder.com/150" alt="Photo de Mehdi">
+            <h1>HADJADJ Mehdi</h1>
+            <div class="personal-info">
+                <p><strong>Date de naissance :</strong> 02 Septembre 1999</p>
+                <p><strong>Lieu :</strong> Oran</p>
+                <p><strong>Adresse :</strong> 10 Rue de la Grande Mosquée, Mers el kebir (Oran)</p>
+                <p><strong>Email :</strong> mehdi.hadjadj101@gmail.com</p>
+                <p><strong>Téléphone :</strong> +213550024830</p>
+            </div>
 
-        <h2>Ingénieur d'études et développement</h2>
+            <div class="competences">
+                <h2 class="section-title">Compétences</h2>
+                <ul>
+                    <li><strong>Technique :</strong> Réseaux et configuration (Cisco, routage IP, MAC, VLAN)</li>
+                    <li><strong>Informatique :</strong> C++, C, Java, HTML, CSS, Packet Tracer</li>
+                </ul>
+            </div>
 
-        <div class="info-section">
-            <h2>Formations</h2>
-            <table>
-                <tr>
-                    <th>2016</th>
-                    <td>Master 3IR à l'université Paris XIII</td>
-                </tr>
-                <tr>
-                    <th>2014</th>
-                    <td>Licence Telecom à l'université Paris XIII</td>
-                </tr>
-                <tr>
-                    <th>2011</th>
-                    <td>Bac S</td>
-                </tr>
-            </table>
-        </div>
+            <div class="langues">
+                <h2 class="section-title">Langue</h2>
+                <ul>
+                    <li><strong>Arabe :</strong> Langue maternelle</li>
+                    <li><strong>Français :</strong> Courant</li>
+                    <li><strong>Anglais :</strong> Moyen</li>
+                </ul>
+            </div>
 
-        <div class="info-section">
-            <h2>Compétences</h2>
-            <div class="skills">
-                <div>
-                    <table class="skills-table">
-                        <tr>
-                            <th>Développement</th>
-                            <td>JAVA 7, HTML</td>
-                        </tr>
-                        <tr>
-                            <th>Base de données</th>
-                            <td>MySQL, PostgreSQL</td>
-                        </tr>
-                        <tr>
-                            <th>Réseaux</th>
-                            <td>IPv6, LAN, WIFI</td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table class="skills-table">
-                        <tr>
-                            <th>Langues</th>
-                            <td>Anglais: bilingue, Français: langue maternelle</td>
-                        </tr>
-                    </table>
-                </div>
+            <div class="interet">
+                <h2 class="section-title">Intérêt</h2>
+                <ul>
+                    <li>Passionné par le sport, la lecture</li>
+                </ul>
             </div>
         </div>
 
-        <div class="info-section">
-            <h2>Expériences</h2>
-            <table>
-                <tr>
-                    <th>2016</th>
-                    <td>Stage de fin d'études chez Orange</td>
-                </tr>
-                <tr>
-                    <th>2014</th>
-                    <td>Stage chez EDF</td>
-                </tr>
-            </table>
-        </div>
+        <div class="right-column">
+            <div class="formations">
+                <h2 class="section-title">Formations (cursus universitaire)</h2>
+                <table>
+                    <tr>
+                        <th>2020-2021</th>
+                        <td><strong>Master 2 en Réseaux & télécommunication</strong><br>Réseaux sans fils et réseaux mobiles, Cryptographie, sécurité réseau, vidéo et audio, etc.<br><em>Université des sciences et technologies - Mohammed BOUDIAF Oran</em></td>
+                    </tr>
+                    <tr>
+                        <th>2019-2020</th>
+                        <td><strong>Master 1 en Réseaux et télécommunication</strong><br>Communication numériques avancées, signal, antennes, C++, DSP & FPGA<br><em>Université des sciences et technologies - Mohammed BOUDIAF Oran</em></td>
+                    </tr>
+                    <tr>
+                        <th>2018-2019</th>
+                        <td><strong>Licence 3 en électronique option Télécommunication</strong><br><em>Université des sciences et technologies - Mohammed BOUDIAF Oran</em></td>
+                    </tr>
+                    <tr>
+                        <th>2017-2018</th>
+                        <td><strong>Licence 2 en électronique option Télécommunication</strong><br><em>Université des sciences et technologies - Mohammed BOUDIAF Oran</em></td>
+                    </tr>
+                    <tr>
+                        <th>2017-2016</th>
+                        <td><strong>Licence 1 en sciences et technologie</strong><br>Physique, Chimie, Probabilité, Informatique, Maths</td>
+                    </tr>
+                    <tr>
+                        <th>2015</th>
+                        <td><strong>Baccalauréat série Mathématique</strong><br>Moyenne 14.59/20, Mers el kebir</td>
+                    </tr>
+                </table>
+            </div>
 
-        <div class="info-section">
-            <h2>Centres d'intérêts</h2>
-            <div class="interests">
-                <div>
-                    <table class="interests-table">
-                        <tr>
-                            <th>Sport</th>
-                            <td>Running, Volley-ball</td>
-                        </tr>
-                        <tr>
-                            <th>Culture</th>
-                            <td>Cinéma, Musée</td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table class="interests-table">
-                        <tr>
-                            <th>Voyages</th>
-                            <td>Angleterre, Espagne</td>
-                        </tr>
-                    </table>
-                </div>
+            <div class="project">
+                <h2 class="section-title">Projet</h2>
+                <p>Réalisation et conception d'un chatbot Facebook.</p>
             </div>
         </div>
     </div>
-
-    <footer>
-        &copy; 2024 Nom Prénom - Tous droits réservés
-    </footer>
 </body>
 
 </html>
+
