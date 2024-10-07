@@ -1,99 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - HADJADJ Mehdi</title>
+    <title>CV - Nom Prénom</title>
     <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
             color: #333;
             line-height: 1.6;
+            padding: 20px;
         }
 
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
+            max-width: 900px;
+            margin: 0 auto;
             background-color: #fff;
             padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .left-column {
-            width: 30%;
-            padding-right: 20px;
-            border-right: 2px solid #ccc;
-        }
-
-        .right-column {
-            width: 70%;
-            padding-left: 20px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            color: #b02e2e;
-            font-size: 26px;
-            margin-top: 0;
-        }
-
-        .section-title {
-            font-size: 22px;
-            color: #b02e2e;
-            border-bottom: 2px solid #b02e2e;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-
-        .personal-info, .competences, .langues, .interet {
+            text-align: center;
+            font-size: 28px;
+            color: #2a9d8f;
             margin-bottom: 20px;
         }
 
-        .personal-info p, .competences p, .langues p, .interet p {
+        h2 {
+            font-size: 22px;
+            color: #e76f51;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e76f51;
+            padding-bottom: 5px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2a9d8f;
+            padding-bottom: 10px;
+        }
+
+        .header div {
+            width: 48%;
+        }
+
+        .header p {
             margin: 5px 0;
+            font-size: 16px;
         }
 
-        .competences ul, .langues ul, .interet ul {
-            list-style-type: none;
-            padding-left: 0;
+        .section {
+            margin-bottom: 30px;
         }
 
-        .competences ul li, .langues ul li, .interet ul li {
-            margin: 5px 0;
-        }
-
-        .formations table {
+        .table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 20px;
         }
 
-        .formations th, .formations td {
+        .table th,
+        .table td {
             padding: 10px;
             text-align: left;
         }
 
-        .formations th {
+        .table th {
             background-color: #f0f0f0;
+            color: #2a9d8f;
         }
 
-        .formations td {
+        .table td {
             border-bottom: 1px solid #ddd;
         }
 
-        .project {
-            margin-top: 20px;
-            font-size: 14px;
+        .competences, .interets {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .competences div,
+        .interets div {
+            width: 48%;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        /* Custom Styles for Colors */
+        .highlight {
+            color: #264653;
+            font-weight: bold;
         }
 
     </style>
@@ -101,80 +114,85 @@
 
 <body>
     <div class="container">
-        <div class="left-column">
-            <img src="https://via.placeholder.com/150" alt="Photo de Mehdi">
-            <h1>HADJADJ Mehdi</h1>
-            <div class="personal-info">
-                <p><strong>Date de naissance :</strong> 02 Septembre 1999</p>
-                <p><strong>Lieu :</strong> Oran</p>
-                <p><strong>Adresse :</strong> 10 Rue de la Grande Mosquée, Mers el kebir (Oran)</p>
-                <p><strong>Email :</strong> mehdi.hadjadj101@gmail.com</p>
-                <p><strong>Téléphone :</strong> +213550024830</p>
+        <h1>Ingénieur d'études et développement</h1>
+        <div class="header">
+            <div>
+                <p><span class="highlight">Nom :</span> Prénom</p>
+                <p><span class="highlight">Adresse :</span> 93 Villetaneuse</p>
+                <p><span class="highlight">Email :</span> nom.prenom@mail.com</p>
             </div>
+            <div>
+                <p><span class="highlight">Statut :</span> Célibataire</p>
+                <p><span class="highlight">Permis :</span> Permis B</p>
+            </div>
+        </div>
 
-            <div class="competences">
-                <h2 class="section-title">Compétences</h2>
+        <div class="section">
+            <h2>Formations</h2>
+            <table class="table">
+                <tr>
+                    <th>2016</th>
+                    <td><strong>Master 3IR</strong> à l'université Paris XIII</td>
+                </tr>
+                <tr>
+                    <th>2014</th>
+                    <td><strong>Licence Telecom</strong> à l'université Paris XIII</td>
+                </tr>
+                <tr>
+                    <th>2011</th>
+                    <td><strong>Bac S</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section competences">
+            <div>
+                <h2>Compétences</h2>
                 <ul>
-                    <li><strong>Technique :</strong> Réseaux et configuration (Cisco, routage IP, MAC, VLAN)</li>
-                    <li><strong>Informatique :</strong> C++, C, Java, HTML, CSS, Packet Tracer</li>
+                    <li><span class="highlight">Développement :</span> JAVA 7, HTML</li>
+                    <li><span class="highlight">Bases de données :</span> MySQL, PostgreSQL</li>
+                    <li><span class="highlight">Réseaux :</span> IPv6, LAN, WIFI</li>
                 </ul>
             </div>
-
-            <div class="langues">
-                <h2 class="section-title">Langue</h2>
+            <div>
+                <h2>Langues</h2>
                 <ul>
-                    <li><strong>Arabe :</strong> Langue maternelle</li>
-                    <li><strong>Français :</strong> Courant</li>
-                    <li><strong>Anglais :</strong> Moyen</li>
-                </ul>
-            </div>
-
-            <div class="interet">
-                <h2 class="section-title">Intérêt</h2>
-                <ul>
-                    <li>Passionné par le sport, la lecture</li>
+                    <li><span class="highlight">Anglais :</span> Bilingue</li>
+                    <li><span class="highlight">Français :</span> Langue maternelle</li>
                 </ul>
             </div>
         </div>
 
-        <div class="right-column">
-            <div class="formations">
-                <h2 class="section-title">Formations (cursus universitaire)</h2>
-                <table>
-                    <tr>
-                        <th>2020-2021</th>
-                        <td><strong>Master 2 en Réseaux & télécommunication</strong><br>Réseaux sans fils et réseaux mobiles, Cryptographie, sécurité réseau, vidéo et audio, etc.<br><em>Université des sciences et technologies - Mohammed BOUDIAF Oran</em></td>
-                    </tr>
-                    <tr>
-                        <th>2019-2020</th>
-                        <td><strong>Master 1 en Réseaux et télécommunication</strong><br>Communication numériques avancées, signal, antennes, C++, DSP & FPGA<br><em>Université des sciences et technologies - Mohammed BOUDIAF Oran</em></td>
-                    </tr>
-                    <tr>
-                        <th>2018-2019</th>
-                        <td><strong>Licence 3 en électronique option Télécommunication</strong><br><em>Université des sciences et technologies - Mohammed BOUDIAF Oran</em></td>
-                    </tr>
-                    <tr>
-                        <th>2017-2018</th>
-                        <td><strong>Licence 2 en électronique option Télécommunication</strong><br><em>Université des sciences et technologies - Mohammed BOUDIAF Oran</em></td>
-                    </tr>
-                    <tr>
-                        <th>2017-2016</th>
-                        <td><strong>Licence 1 en sciences et technologie</strong><br>Physique, Chimie, Probabilité, Informatique, Maths</td>
-                    </tr>
-                    <tr>
-                        <th>2015</th>
-                        <td><strong>Baccalauréat série Mathématique</strong><br>Moyenne 14.59/20, Mers el kebir</td>
-                    </tr>
-                </table>
-            </div>
+        <div class="section">
+            <h2>Expériences</h2>
+            <table class="table">
+                <tr>
+                    <th>2016</th>
+                    <td><strong>Stage de fin d'études</strong> chez <span class="highlight">Orange</span></td>
+                </tr>
+                <tr>
+                    <th>2014</th>
+                    <td><strong>Stage</strong> chez <span class="highlight">EDF</span></td>
+                </tr>
+            </table>
+        </div>
 
-            <div class="project">
-                <h2 class="section-title">Projet</h2>
-                <p>Réalisation et conception d'un chatbot Facebook.</p>
+        <div class="section interets">
+            <div>
+                <h2>Centres d'intérêts</h2>
+                <ul>
+                    <li><span class="highlight">Sport :</span> Running, Volley-ball</li>
+                    <li><span class="highlight">Culture :</span> Cinéma, Musée</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Voyages</h2>
+                <ul>
+                    <li><span class="highlight">Pays :</span> Angleterre, Espagne</li>
+                </ul>
             </div>
         </div>
     </div>
 </body>
 
 </html>
-
