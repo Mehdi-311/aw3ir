@@ -1,0 +1,67 @@
+/* Alignement des labels et input */
+label {
+    width: 150px;
+    display: inline-block;
+}
+
+input {
+    width: 250px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Style du formulaire */
+form {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+/* Style pour le bouton de soumission */
+.btn-primary {
+    border-radius: 5px;
+    padding: 6px 12px;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Griser le bouton submit si le formulaire est invalide */
+form:invalid input[type="submit"] {
+    background-color: gray;
+    cursor: not-allowed;
+    border-color: gray;
+}
+
+/* Bordure rouge pour les champs invalides */
+input:invalid {
+    border-color: red;
+}
+
+/* Masquer l'emoji de validation si le champ est invalide */
+input:invalid + .icon-ok {
+    display: none;
+}
+
+/* Afficher l'emoji ✔️ pour les champs valides */
+input:valid + .icon-ok {
+    display: inline-block;
+}
+
+/* Style des messages d'erreur */
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    display: none; /* Masquer par défaut */
+}
+
+/* Afficher le message d'erreur si le champ est invalidé */
+input:invalid ~ .error-message {
+    display: inline; /* Afficher le message si le champ est invalide */
+}
