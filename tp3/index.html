@@ -1,39 +1,62 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TP3</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <style>
-        body {
-            background-color: #e9ebee;
-            font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-            font-size: 16px;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-    </style>
-
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP AW</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
 <body>
-    <nav>
-        <a href="..">🏠 Index</a> / TP3
-    </nav>
-    <h1>tp3</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
+    <div class="container mt-5">
+        <h1>TP AW</h1>
+        <p>Avec Bootstrap 5</p>
+        <form id="myForm">
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Entrez votre nom">
+            </div>
+            <div class="mb-3">
+                <label for="firstName" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Entrez votre prénom">
+            </div>
+            <div class="mb-3">
+                <label for="birthday" class="form-label">Date de naissance</label>
+                <input type="date" class="form-control" id="birthday">
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Adresse</label>
+                <input type="text" class="form-control" id="address" placeholder="Entrez votre adresse">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Entrez votre email">
+            </div>
+            <button type="submit" class="btn btn-primary">Valider</button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bootstrap -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/form-validation.js"></script>
 </body>
 
 </html>
