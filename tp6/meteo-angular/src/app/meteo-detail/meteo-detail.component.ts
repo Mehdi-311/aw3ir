@@ -10,6 +10,7 @@ import { MeteoService } from "../services/meteo.service";
 export class MeteoDetailComponent implements OnInit {
   meteo: any;
   latlon: string = "";
+  fiveDayForecast: any[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -18,14 +19,12 @@ export class MeteoDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getMeteo();
+    this.getFiveDayForecast();
   }
 
   getMeteo(): void {
-    // pour lire la paramètre 'name' dans l'URL de la page  comme définit dans le router avec
-    // path: 'meteo/:name'
     const name = this.route.snapshot.paramMap.get("name");
 
-    console.log("getmeteo pour", name);
     if (name) {
       this.meteoService
         .getMeteo(name)
@@ -34,6 +33,27 @@ export class MeteoDetailComponent implements OnInit {
           this.latlon = `${this.meteo.coord.lat},${this.meteo.coord.lon}`;
         })
         .catch((fail) => (this.meteo = fail));
+    }
+  }
+
+  getFiveDayForecast(): void {
+    const name = this.route.snapshot.paramMap.get("name");
+
+    if (name) {
+      this.meteoService
+        .getFiveDayForecast(name)
+        .then((response) => {
+          // Filtrer pour obtenir une prévision par jour à midi
+          this.fiveDayForecast = response.list.filter((item: any) =>
+            item.dt_txt.includes("12:00:00")
+          );
+        })
+        .catch((error) =>
+          console.error(
+            "Erreur lors de la récupération des prévisions sur 5 jours :",
+            error
+          )
+        );
     }
   }
 }
