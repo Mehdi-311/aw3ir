@@ -100,7 +100,7 @@
         <!-- Affichage de la carte Google Maps avec les coordonnées de la ville -->
         <img
           class="card-img-top"
-          v-bind:src="'https://maps.googleapis.com/maps/api/staticmap?markers=' + cityWeather.coord.lat + ',' + cityWeather.coord.lon + '&zoom=5&size=400x300&scale=2&key=AIzaSyCK3TY4ZcqxdEMhrnesJ5ACP8cs7U-4mRI'"
+          v-bind:src="' https://maps.googleapis.com/maps/api/staticmap?markers='+cityWeather.coord.lon+','+cityWeather.coord.lat+'&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg'"
           alt="Google Map"
         />
 
