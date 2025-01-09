@@ -1,0 +1,33 @@
+.forecast-card {
+    height: 200px; /* Définir la hauteur fixe pour toutes les cartes */
+    display: flex; /* Utiliser Flexbox pour un meilleur alignement */
+    flex-direction: column; /* Organiser les éléments en colonne */
+    justify-content: space-between; /* Espacer le contenu verticalement */
+  }
+  
+  .card-title {
+    margin: 0; /* Enlever les marges pour un meilleur alignement */
+  }
+  
+  /* Styles supplémentaires pour la présentation */
+  .card-header {
+    font-weight: bold; /* Mettre en gras le texte de l'en-tête de la carte */
+  }
+  
+  .card-body {
+    padding: 10px; /* Réduire l'espace de remplissage dans le corps de la carte */
+  }
+  
+  h3 {
+    margin-top: 20px; /* Ajouter un espace au-dessus du titre des prévisions */
+  }
+  
+  .row {
+    display: flex; /* Assurez-vous que la ligne est une flexbox pour un bon espacement */
+    justify-content: center; /* Centrer les cartes horizontalement */
+  }
+  
+  .card-text {
+    font-size: 14px; /* Ajuster la taille du texte des prévisions */
+  }
+  

@@ -56,13 +56,21 @@
 </div>
 
 <!-- Affichage des prévisions sur 5 jours -->
-<h3>Prévisions sur 5 jours</h3>
-<div *ngIf="fiveDayForecast.length > 0">
-  <div *ngFor="let forecast of fiveDayForecast">
-    <p>Date : {{ forecast.dt_txt | date: 'fullDate' }}</p>
-    <p>Température : {{ forecast.main.temp }} °C</p>
-    <p>Conditions : {{ forecast.weather[0].description }}</p>
-    <hr />
+<h3 class="mt-4">Prévisions sur 5 jours</h3>
+<div *ngIf="fiveDayForecast.length > 0" class="row">
+  <div *ngFor="let forecast of fiveDayForecast" class="col-md-2 mb-3">
+    <div class="card forecast-card">
+      <div class="card-header text-center">
+        {{ forecast.dt_txt | date: 'fullDate' }}
+      </div>
+      <div class="card-body text-center">
+        <h5 class="card-title">
+          <i [ngClass]="'wi wi-owm-day-' + forecast.weather[0].id"></i>
+          {{ forecast.main.temp }} °C
+        </h5>
+        <p class="card-text">{{ forecast.weather[0].description }}</p>
+      </div>
+    </div>
   </div>
 </div>
 
